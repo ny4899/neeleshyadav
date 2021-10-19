@@ -1,0 +1,837 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+// -------- all variables starts
+$darker: #17252a;
+$glossydark: #358f8c;
+$glossy: #16f7eb;
+$grey: #93b9b8;
+$white: #ffffff;
+$black: #000000;
+$gray: gray;
+// -------- all variables ends
+
+// -------- all mixins starts
+@mixin centerFlex($dirc) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $dirc;
+}
+
+//------------------------
+.dis_none {
+  display: none !important;
+}
+.dis_flex {
+  display: flex !important;
+}
+.dis_block {
+  display: block !important;
+}
+//------------------------
+
+// -------- all mixins ends
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+//scroll bar styling ends
+body {
+  background-color: $darker;
+}
+body * {
+  overflow-x: hidden;
+}
+
+// css for head on full screen starts ------------
+header {
+  width: 100%;
+  height: 100vh;
+}
+.head_up {
+  width: 100%;
+  height: 50vh;
+  background-color: $glossydark;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  color: $white;
+  p {
+    font-size: 50px;
+  }
+  h1 {
+    font-size: 80px;
+  }
+}
+.head_down {
+  width: 100%;
+  height: 50vh;
+  background-color: $darker;
+  padding: 0 100px;
+  color: $white;
+  overflow: hidden;
+  p {
+    font-size: 25px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: $darker;
+    color: $white;
+    border: 2px solid $white;
+    padding: 0.4rem 1.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    i {
+      margin-right: 0.5rem;
+    }
+    &:hover {
+      background-color: $white;
+      color: $darker;
+    }
+  }
+}
+// css for head on full screen ends ------------
+// css for icon_container on full screen starts ------------
+.all_icons {
+  height: 300px;
+  width: 30px;
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+  z-index: 100;
+  @include centerFlex(column);
+  .icon_container {
+    width: 100%;
+    height: 50%;
+    @include centerFlex(column);
+    a {
+      text-decoration: none;
+      margin: 10px 0;
+    }
+    i {
+      font-size: 20px;
+      color: $gray;
+    }
+  }
+  & > i {
+    width: 100%;
+    height: 50%;
+    @include centerFlex(row);
+    padding-top: 10px;
+    b {
+      width: 2px;
+      height: 100%;
+      background-color: $gray;
+    }
+  }
+}
+// css for icon_container on full screen ends ------------
+// css for nav_container on full screen starts ------------
+nav {
+  width: 100%;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  background-color: $darker;
+  box-shadow: 0px 0px 2px $glossy;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  transition: all 0.4s;
+  z-index: 10;
+  &:hover {
+    box-shadow: 0px 0px 6px $glossy;
+  }
+}
+.nav_logo_box {
+  width: 110px;
+  height: 90%;
+  @include centerFlex(row);
+  background-color: $darker;
+  margin: auto 0;
+  overflow: hidden;
+  a {
+    text-decoration: none;
+    @include centerFlex(row);
+    height: 100%;
+    img {
+      height: 100%;
+    }
+  }
+}
+.nav_link_box {
+  width: 550px;
+  height: 100%;
+  & > i {
+    display: none;
+    color: $glossy;
+  }
+  ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $glossy;
+        transition: all 0.3s;
+        i {
+          font-size: 1.4rem;
+          margin-right: 0.3rem;
+        }
+        &:hover {
+          color: $gray;
+        }
+      }
+    }
+  }
+}
+// css for nav_container on full screen ends ------------
+// css for mob_nav_container on full screen starts ------------
+.mob_nav_container_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: $black;
+  opacity: 0.9;
+}
+.mob_nav_link_container {
+  position: fixed;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  z-index: 10000;
+  background-color: $darker;
+  transition: all 0.5s;
+}
+.mob_container_hide {
+  right: -250px;
+}
+.mob_container_show {
+  right: 0px;
+}
+.mob_nav_link_box_size {
+  width: 100%;
+  height: 60px;
+  @include centerFlex(row);
+  a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: $glossy;
+    font-weight: 600;
+    padding: 2px 5px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $gray;
+    }
+  }
+}
+#cancel {
+  padding: 5px 7px;
+  transition: all 0.3s;
+  color: $glossy;
+  &:hover {
+    color: $gray;
+  }
+}
+.mob_head {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.mob_nav_social_link_box {
+  width: 100%;
+  height: 60px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  a {
+    text-decoration: none;
+    @include centerFlex(row);
+    i {
+      font-size: $darker;
+      font-size: 1.8rem;
+      padding: 5px;
+      color: $glossy;
+      &:hover {
+        color: $gray;
+      }
+    }
+  }
+}
+// css for mob_nav_container on full screen ends ------------
+// css for about section on full screen starts ------------
+.about_section_container {
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
+  padding: 100px 50px;
+  display: flex;
+}
+.about_right_conatainer {
+  width: 50%;
+  height: 550px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: $grey;
+}
+.about_img_container {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background-image: url(images/myimg.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: -12px 12px 0px $glossydark;
+  .about_img_overlay_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 500px;
+    background-color: $glossy;
+    opacity: 0.25;
+    img {
+      width: 100%;
+    }
+  }
+}
+.about_left_conatainer {
+  width: 50%;
+  padding: 10px 10vw 10px 50px;
+
+  h1 {
+    font-size: 80px;
+    color: $glossy;
+  }
+  h3 {
+    font-size: 20px;
+    margin: 5px 0 30px 0;
+    color: $grey;
+  }
+  p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    color: $gray;
+  }
+  .skil_box {
+    max-width: 300px;
+    margin: 10px 0;
+    ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 5px;
+      & * {
+        font-weight: bolder;
+        color: $grey;
+      }
+      li {
+        font-size: 20px;
+        padding: 5px;
+
+        i {
+          font-size: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+// css for about section on full screen ends ------------
+// css for work section on full screen starts ------------
+.work_section_container {
+  width: 100%;
+  max-width: 1500px;
+  height: 100%;
+  margin: 0 auto;
+  background-image: url(images/mountain.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.work_section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.work_section_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $darker;
+  opacity: 0.5;
+}
+.work_content_container {
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  padding: 50px 50px;
+  overflow: hidden;
+}
+.work_head_container {
+  width: 100%;
+  padding: 20px;
+  overflow: hidden;
+  h1 {
+    font-size: 40px;
+    text-align: center;
+    word-spacing: 20px;
+  }
+}
+.work_main_container {
+  margin: 30px auto;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  .work_img_container {
+    width: 50%;
+    padding: 20px 0;
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+  .work_link_container {
+    width: 60%;
+    z-index: 1;
+    padding: 10px;
+    & :nth-child(n) {
+      margin-bottom: 8px;
+    }
+    & > h1 {
+      font-family: "Noto Sans Mono", monospace;
+      font-size: 40px;
+      letter-spacing: 2px;
+    }
+    .work_link_container_h1_black {
+      color: $black;
+    }
+    .work_link_container_h1_white {
+      color: $white;
+    }
+    & > p {
+      font-size: 16px;
+      background-color: $darker;
+      color: $glossy;
+      border-radius: 10px;
+      padding: 20px 15px;
+      word-spacing: 2px;
+    }
+    & > h2 {
+      font-size: 18px;
+      word-spacing: 20px;
+    }
+    .work_link_box {
+      // background-color: $glossy;
+      width: 100%;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      a {
+        margin: 0 20px;
+        font-weight: bolder;
+        color: $grey;
+        transition: all 0.3s;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+//for lift img
+.work_img_container_left {
+  transform: translateX(5%);
+}
+.work_link_container_lift {
+  transform: translateX(5%);
+}
+.align_left {
+  text-align: left;
+}
+.justify_left {
+  justify-content: flex-start;
+}
+//for right img
+.work_img_container_right {
+  transform: translateX(-5%);
+}
+.work_link_container_rigth {
+  transform: translateX(-5%);
+}
+.align_right {
+  text-align: right;
+}
+.justify_right {
+  justify-content: flex-end;
+}
+// css for work section on full screen ends ------------
+// css for contact section on full screen starts ------------
+.contact_section_container {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px;
+  @include centerFlex(column);
+  overflow: hidden;
+  h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: $glossy;
+  }
+  p {
+    font-size: 20px;
+    text-align: center;
+    color: $gray;
+  }
+  a {
+    padding: 10px 40px;
+    font-size: 20px;
+    color: $white;
+    border: 2px solid $white;
+    background-color: rgba($color: $glossy, $alpha: 0.2);
+    text-decoration: none;
+    margin: 100px 0;
+    i {
+      font-size: 20px;
+      margin-left: 5px;
+    }
+    &:hover {
+      background-color: rgba($color: $glossy, $alpha: 0.4);
+    }
+  }
+  h2 {
+    font-size: 20px;
+    margin: 5px;
+    text-align: center;
+    color: $gray;
+    i {
+      margin-right: 10px;
+    }
+  }
+}
+// css for contact section on full screen ends ------------
+// css for footer section on full screen starts ------------
+footer {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  p {
+    text-align: center;
+    font-size: 16px;
+    color: $gray;
+  }
+  & > a {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color: $grey;
+    margin: 5px 0 25px 0;
+  }
+  .footer_link_box {
+    width: 100%;
+    @include centerFlex(row);
+    font-size: 16px;
+    margin: 5px 0;
+    a {
+      margin: 0 3px;
+      i {
+        padding: 5px;
+        color: $gray;
+      }
+    }
+  }
+}
+// css for footer section on full screen ends ------------
+
+@media only screen and (max-width: 992px) {
+  // css for head on large screen starts ------------
+  .head_up {
+    p {
+      font-size: 30px;
+    }
+    h1 {
+      font-size: 60px;
+    }
+  }
+  .head_down {
+    p {
+      font-size: 22px;
+    }
+    h1 {
+      font-size: 45px;
+    }
+    a {
+      margin-top: 20px;
+    }
+  }
+  // css for head on large screen ends ------------
+
+  // css for nav_container on mid screen starts ------------
+  nav {
+    padding: 0 0 0 15px;
+  }
+  .nav_link_box {
+    ul {
+      li {
+        a {
+          font-size: 1.4rem;
+          i {
+            margin-right: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+  // css for nav_container on mid screen ends ------------
+  // css for about section on large screen starts ------------
+  .about_section_container {
+    padding: 100px 0;
+  }
+  .about_left_conatainer {
+    width: 50%;
+    padding: 10px 8vw 10px 25px;
+  }
+  // css for about section on large screen ends ------------
+}
+@media only screen and (max-width: 768px) {
+  // css for head on mid screen starts ------------
+  .head_up {
+    padding: 0 50px;
+    p {
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 50px;
+    }
+  }
+  .head_down {
+    padding: 0 50px;
+    p {
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 35px;
+    }
+  }
+  // css for head on mid screen ends ------------
+
+  // css for nav_container on mid screen starts ------------
+  nav {
+    padding: 0 20px;
+    height: 50px;
+  }
+  .nav_link_box {
+    @include centerFlex(row);
+    width: 40px;
+    ul {
+      display: none;
+    }
+    & > i {
+      display: block;
+      font-size: 2.2rem;
+      cursor: pointer;
+    }
+  }
+
+  //making display none of all_icons container
+  .all_icons {
+    display: none;
+  }
+
+  // css for nav_container on mid screen ends ------------
+  // css for about section on mid screen starts ------------
+
+  .about_section_container {
+    flex-direction: column;
+    padding: 50px 50px;
+  }
+  .about_right_conatainer {
+    width: 100%;
+  }
+  .about_left_conatainer {
+    width: 100%;
+    padding: 10px 50px 10px 50px;
+  }
+  // css for about section on mid screen ends ------------
+  // css for work section on mid screen starts ------------
+  //for lift img
+  .work_main_container {
+    flex-direction: column;
+    margin: 0 auto;
+    .work_img_container {
+      width: 70%;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .work_link_container {
+      width: 100%;
+    }
+  }
+  .work_img_container_left {
+    transform: translateX(0%);
+    transform: translateY(10%);
+  }
+  .work_link_container_lift {
+    transform: translateX(0%);
+    transform: translateY(-10%);
+
+    order: 2;
+  }
+  //for right img
+  .work_img_container_right {
+    transform: translateX(0%);
+    transform: translateY(10%);
+
+    order: 1;
+  }
+  .work_link_container_rigth {
+    transform: translateX(0%);
+    transform: translateY(-10%);
+  }
+  // css for work section on mid screen ends ------------
+}
+@media only screen and (max-width: 576px) {
+  // css for head on small screen starts ------------
+  .head_up {
+    height: 40vh;
+    padding: 0 20px;
+  }
+  .head_down {
+    height: 60vh;
+    padding: 0 20px;
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  // css for head on small screen ends ------------
+  // css for about section on small screen starts ------------
+  .about_section_container {
+    flex-direction: column;
+    padding: 50px 10px;
+  }
+  .about_right_conatainer {
+    width: 100%;
+    padding: 0px 0px;
+    height: 500px;
+    background-color: $darker;
+    .about_img_container {
+      margin: 0 auto;
+      height: 450px;
+      .about_img_overlay_container {
+        height: 450px;
+      }
+    }
+  }
+  .about_left_conatainer {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+
+    h1 {
+      margin-top: 0px;
+      font-size: 50px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .skil_box {
+      ul {
+        li {
+          font-size: 16px;
+          i {
+            font-size: 14px;
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+  }
+  // css for about section on small screen ends ------------
+  // css for work section on small screen starts ------------
+  //for lift img
+  .work_content_container {
+    padding: 0px;
+  }
+  .work_head_container {
+    h1 {
+      font-size: 30px;
+      word-spacing: 10px;
+    }
+  }
+
+  .work_main_container {
+    .work_img_container {
+      width: 80%;
+    }
+  }
+
+  // css for work section on small screen ends ------------
+  // css for contact section on small screen starts ------------
+  .contact_section_container {
+    padding: 40px 15px;
+    h1 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 16px;
+    }
+    a {
+      padding: 5px 15px;
+      font-size: 16px;
+      margin: 60px 0;
+      i {
+        font-size: 16px;
+        margin-left: 2px;
+      }
+    }
+    h2 {
+      font-size: 18px;
+      i {
+        margin-right: 5px;
+        padding: 2px;
+      }
+    }
+  }
+  // css for contact section on small screen ends ------------
+}

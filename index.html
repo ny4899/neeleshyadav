@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neelesh Yadav</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="SASS/main.css" />
+    <link rel="stylesheet" href="webfonts/all.css" />
+
+    <!-- font family starts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font family ends  -->
+  </head>
+  <body>
+    <header id="home">
+      <div class="head_up">
+        <p data-aos="fade-down" data-aos-delay="700" data-aos-duration="1500">
+          hi! i'm
+        </p>
+        <h1 data-aos="fade-down" data-aos-delay="500" data-aos-duration="1500">
+          Neelesh
+        </h1>
+      </div>
+      <div class="head_down">
+        <h1 data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+          Front End Web Developer
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="700" data-aos-duration="1500">
+          I enjoy creating things that live on the internet
+        </p>
+        <a
+          href="#myNav"
+          data-aos="fade-up"
+          data-aos-delay="800"
+          data-aos-duration="1500"
+        >
+          <i class="fas fa-arrow-down"></i> Scroll
+        </a>
+      </div>
+    </header>
+    <!-- full screen social icon HTML starts -->
+    <div
+      class="all_icons"
+      data-aos="fade-up"
+      data-aos-delay="800"
+      data-aos-duration="1500"
+    >
+      <div class="icon_container">
+        <a href="https://github.com/ny4899" target="_blank" title="Github"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://codepen.io/Neelesh_Yadav"
+          target="_blank"
+          title="Codepen"
+          ><i class="fab fa-codepen"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/neelesh-yadav-b799aa222/"
+          target="_blank"
+          title="Linkedin"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </div>
+      <i><b></b></i>
+    </div>
+    <!-- full screen social icon HTML ends -->
+    <!-- full screen navigation starts  -->
+    <nav id="myNav">
+      <div class="nav_logo_box">
+        <a href="#"><img src="SASS/images/myLogo.png" alt="" /></a>
+      </div>
+      <div class="nav_link_box">
+        <ul>
+          <li>
+            <a href="#aboutMe">ABOUT ME</a>
+          </li>
+          <li><a href="#myWork">MY WORK</a></li>
+          <li>
+            <a href="#contactMe"
+              ><i class="fas fa-address-book"></i> CONTACT ME</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1LuCXARUrImhlOdmBH7QG2CfPjd4DT6L4/view?usp=sharing"
+              target="_blank"
+              ><i class="fas fa-file"></i> RESUME</a
+            >
+          </li>
+        </ul>
+        <i class="fas fa-bars" id="hum"></i>
+      </div>
+    </nav>
+    <!-- full screen navigation ends  -->
+    <!-- mob navigation starts -->
+    <!-- mob navigation overlay starts -->
+    <div class="mob_nav_container_overlay dis_none"></div>
+    <!-- mob navigation overlay ends -->
+    <!-- mob navigation main container starts -->
+    <div class="mob_nav_link_container mob_container_hide">
+      <!-- mob_nav head part starts  -->
+      <div class="mob_head mob_nav_link_box_size">
+        <div class="nav_logo_box">
+          <a href="#home" onclick="mob_nav_hide_visible(check)"
+            ><img src="SASS/images/myLogo.png" alt=""
+          /></a>
+        </div>
+        <div class="nav_link_box">
+          <i
+            class="fas fa-times"
+            id="cancel"
+            onclick="mob_nav_hide_visible(check)"
+          ></i>
+        </div>
+      </div>
+      <!-- mob_nav head part ends  -->
+      <!-- mob_nav all links starts  -->
+      <div class="mob_nav_link_box_size">
+        <a href="#aboutMe" onclick="mob_nav_hide_visible(check)">ABOUT ME</a>
+      </div>
+      <div class="mob_nav_link_box_size">
+        <a href="#myWork" onclick="mob_nav_hide_visible(check)">MY WORK</a>
+      </div>
+      <div class="mob_nav_link_box_size">
+        <a href="#contactMe" onclick="mob_nav_hide_visible(check)">CONTACT</a>
+      </div>
+      <div class="mob_nav_link_box_size">
+        <a
+          href="https://drive.google.com/file/d/1LuCXARUrImhlOdmBH7QG2CfPjd4DT6L4/view?usp=sharing"
+          target="_blank"
+          onclick="mob_nav_hide_visible(check)"
+          >RESUME</a
+        >
+      </div>
+      <div class="mob_nav_social_link_box">
+        <a
+          href="https://github.com/ny4899"
+          target="_blank"
+          title="Github"
+          onclick="mob_nav_hide_visible(check)"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://codepen.io/Neelesh_Yadav"
+          target="_blank"
+          title="Codepen"
+          onclick="mob_nav_hide_visible(check)"
+          ><i class="fab fa-codepen"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/neelesh-yadav-b799aa222/"
+          target="_blank"
+          title="Linkedin"
+          onclick="mob_nav_hide_visible(check)"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </div>
+      <!-- mob_nav all links ends  -->
+    </div>
+    <!-- mob navigation main container ends -->
+    <!-- mob navigation ends -->
+    <!-- about section starts  -->
+    <div class="about_section_container" id="aboutMe">
+      <div
+        class="about_right_conatainer"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
+        <div class="about_img_container">
+          <div class="about_img_overlay_container"></div>
+        </div>
+      </div>
+      <div
+        class="about_left_conatainer"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+      >
+        <h1>hello</h1>
+        <h3>Here's who I'm & what I do</h3>
+        <p>
+          I am Neelesh form Delhi a Front-end Developer and I enjoy creating
+          modern looking website. My interest in Front end development started
+          in January 2021 form that day i started learing HTML & CSS.
+        </p>
+        <p>
+          Fast-forward to today, i'm enough comfortable with HTML, CSS &
+          javaScript to create amazing websites that sounds WOW.
+        </p>
+        <p>Here are a few technologies I’ve been practicing</p>
+        <div class="skil_box">
+          <ul>
+            <li><i class="fas fa-caret-right"></i> HTML</li>
+            <li><i class="fas fa-caret-right"></i> CSS</li>
+            <li><i class="fas fa-caret-right"></i> javaScript</li>
+            <li><i class="fas fa-caret-right"></i> SASS</li>
+            <li><i class="fas fa-caret-right"></i> Bootstrap</li>
+            <li><i class="fas fa-caret-right"></i> Photoshop</li>
+          </ul>
+        </div>
+        <p>
+          The most important skill i am working on it daily is Practice practice
+          and practice
+        </p>
+      </div>
+    </div>
+    <!-- about section ends  -->
+    <!-- work section starts  -->
+    <div class="work_section_container" id="myWork">
+      <div class="work_section">
+        <div class="work_section_overlay"></div>
+        <div class="work_content_container">
+          <div class="work_head_container">
+            <h1 data-aos="fade-up" data-aos-duration="500">MY WORK</h1>
+          </div>
+          <!-- work card on image left side starts  -->
+          <div
+            class="work_main_container"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="work_img_container work_img_container_left">
+              <img src="SASS/images/ssDigitalHouse.png" alt="" />
+            </div>
+            <div class="work_link_container work_link_container_rigth">
+              <h1 class="align_right work_link_container_h1_white">
+                Digital House
+              </h1>
+              <p class="align_right">
+                This is an web solution company website. I created this fully
+                responsive website in vanilla CSS & Javascript. I also created
+                many cool sections in this web page such as three cool animated
+                pricing card, A caresol for team members cards, A video section
+                that showcase the designing skills of company, A good looking
+                contact us section and many more...
+              </p>
+              <h2 class="align_right">HTML CSS javaScript VScode</h2>
+              <div class="work_link_box justify_right">
+                <a
+                  href="https://github.com/ny4899/Digital_House"
+                  target="_blank"
+                  >Source code</a
+                >
+                <a
+                  href="https://ny4899.github.io/Digital_House/"
+                  target="_blank"
+                  >Vist_site</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- work card on image left side ends  -->
+          <!-- work card on image right side starts  -->
+          <div
+            class="work_main_container"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="work_link_container work_link_container_lift">
+              <h1 class="align_left work_link_container_h1_white">
+                Jonny's portfolio
+              </h1>
+              <p class="align_left">
+                This is an personal portfolio website for a Photographer and
+                Designer. I choose Dark color theme for this website. I created
+                this fully responsive single page website in vanilla CSS &
+                Javascript with a large background image of owner.
+              </p>
+              <h2 class="align_left">HTML CSS javaScript VScode</h2>
+              <div class="work_link_box justify_left">
+                <a href="https://github.com/ny4899/jonny" target="_blank"
+                  >Source code</a
+                >
+                <a href="https://ny4899.github.io/jonny/" target="_blank"
+                  >Vist_site</a
+                >
+              </div>
+            </div>
+            <div class="work_img_container work_img_container_right">
+              <img src="SASS/images/ssJonny.png" alt="" />
+            </div>
+          </div>
+          <!-- work card on image right side ends  -->
+          <!-- work card on image left side starts  -->
+          <div
+            class="work_main_container"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="work_img_container work_img_container_left">
+              <img src="SASS/images/ssW3Clone.png" alt="" />
+            </div>
+            <div class="work_link_container work_link_container_rigth">
+              <h1 class="align_right">W3School Clone</h1>
+              <p class="align_right">
+                I cloned W3School Home page to challenge my css & javascript
+                skills. I learned a lot for this project such as how to create a
+                fully responsive Mega navigation bar, How to use flex box to
+                make website responsive, how to align element with flex box,
+                reusable code and many more...
+              </p>
+              <h2 class="align_right">HTML SASS javaScript VScode</h2>
+              <div class="work_link_box justify_right">
+                <a
+                  href="https://github.com/ny4899/w3_schools_clone"
+                  target="_blank"
+                  >Source code</a
+                >
+                <a
+                  href="https://ny4899.github.io/w3_schools_clone/"
+                  target="_blank"
+                  >Vist_site</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- work card on image left side ends  -->
+          <!-- work card on image right side starts  -->
+          <div
+            class="work_main_container"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="work_link_container work_link_container_lift">
+              <h1 class="align_left work_link_container_h1_white">
+                My Portfolio
+              </h1>
+              <p class="align_left">
+                This is my portfolio website. I develop this website in vanilla
+                CSS & javascript and i also use a Plugin for on scroll
+                animations. I spend a lot of time to find wright color
+                combination for my website. I wanted to keep the code as basic
+                as possible but still make the site interactive and modern
+                looking.
+              </p>
+              <h2 class="align_left">HTML SASS javaScript VScode</h2>
+              <div class="work_link_box justify_left">
+                <a href="https://github.com/ny4899/neeleshyadav" target="_blank"
+                  >Source code</a
+                >
+                <!-- <a href="">Vist_site</a> -->
+              </div>
+            </div>
+            <div class="work_img_container work_img_container_right">
+              <img src="SASS/images/ssPortfolio.png" alt="" />
+            </div>
+          </div>
+          <!-- work card on image right side ends  -->
+        </div>
+      </div>
+    </div>
+    <!-- work section ends  -->
+    <!-- contact section starts  -->
+    <div class="contact_section_container" id="contactMe">
+      <h1 data-aos="fade-up" data-aos-duration="500">Get In Touch</h1>
+      <p data-aos="fade-up" data-aos-duration="500">
+        Although I'm currently looking for new opportunities.
+      </p>
+      <p data-aos="fade-up" data-aos-duration="500">
+        Feel free to get in touch with me.
+      </p>
+      <p data-aos="fade-up" data-aos-duration="500">
+        I'm always open to discussing new projects
+      </p>
+      <p data-aos="fade-up" data-aos-duration="500">
+        or to be part of your Visions.
+      </p>
+      <a
+        href="mailto:ny4899@gmail.com"
+        data-aos="fade-up"
+        data-aos-duration="500"
+        >click to say Hello! <i class="far fa-smile"></i
+      ></a>
+      <h2>
+        <i class="far fa-envelope"></i>
+        ny4899@gmail.com
+      </h2>
+      <h2>
+        <i class="fab fa-whatsapp"></i>
+        9582824760
+      </h2>
+    </div>
+    <footer>
+      <p>Designed & Build by Neelesh Yadav</p>
+      <div class="footer_link_box">
+        <a href="https://github.com/ny4899" target="_blank" title="Github"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://codepen.io/Neelesh_Yadav"
+          target="_blank"
+          title="Codepen"
+          ><i class="fab fa-codepen"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/neelesh-yadav-b799aa222/"
+          target="_blank"
+          title="Linkedin"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </div>
+      <a href="#home">go to top</a>
+    </footer>
+    <!-- contact section ends  -->
+    <script src="portfolio.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
