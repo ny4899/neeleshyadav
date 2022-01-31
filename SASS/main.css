@@ -64,7 +64,7 @@ header {
 }
 
 .head_up h1 {
-  font-size: 80px;
+  font-size: 70px;
 }
 
 .head_down {
@@ -78,10 +78,11 @@ header {
 
 .head_down p {
   font-size: 25px;
+  margin: 20px 0;
 }
 
 .head_down h1 {
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .head_down a {
@@ -823,7 +824,7 @@ footer .footer_link_box a i {
     font-size: 22px;
   }
   .head_down h1 {
-    font-size: 45px;
+    font-size: 40px;
   }
   .head_down a {
     margin-top: 20px;

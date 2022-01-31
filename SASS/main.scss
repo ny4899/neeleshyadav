@@ -64,9 +64,10 @@ header {
   color: $white;
   p {
     font-size: 50px;
+    // margin: 20px 0;
   }
   h1 {
-    font-size: 80px;
+    font-size: 70px;
   }
 }
 .head_down {
@@ -78,9 +79,10 @@ header {
   overflow: hidden;
   p {
     font-size: 25px;
+    margin: 20px 0;
   }
   h1 {
-    font-size: 60px;
+    font-size: 40px;
   }
   a {
     text-decoration: none;
@@ -597,7 +599,7 @@ footer {
       font-size: 22px;
     }
     h1 {
-      font-size: 45px;
+      font-size: 40px;
     }
     a {
       margin-top: 20px;
